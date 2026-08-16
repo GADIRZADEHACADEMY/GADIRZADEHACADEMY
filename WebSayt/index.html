@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Academy | Tədris Mərkəzi</title>
+    <style>
+        /* STANDART AYARLARIN SIFIRLANMASI */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            /* Düyməyə basanda rəvan sürüşməni təmin edir */
+        }
+        
+        body {
+            font-family: 'Cinzel', 'Segoe UI', serif;
+            line-height: 1.6;
+            color: #e5e5e5;
+            background-color: #0b0c10;
+            /* Lüks gecə qarası */
+        }
+        /* PREMIUM NAVİQASİYA PANELİ */
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(11, 12, 16, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 22px 20px;
+            z-index: 1000;
+            border-bottom: 1px solid #1f2833;
+        }
+        
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #c5a880;
+            /* Premium tünd qızılı ton */
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #c5a880;
+        }
+        /* 1. HOME (ƏSAS SƏHİFƏ) - VİDEO GİRİŞ */
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.5), rgba(11, 12, 16, 0.9));
+            /* Premium qaralma effekti */
+            z-index: -1;
+        }
+        
+        .content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 80px;
+        }
+        
+        .content h1 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        
+        .content p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            color: #c5a880;
+            /* Yazılarda qızılı vurğu */
+            font-weight: 300;
+        }
+        /* AKTİV KƏŞF ET DÜYMƏSİ */
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1rem;
+            color: #0b0c10;
+            background-color: #c5a880;
+            /* Qızılı düymə */
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+        }
+        
+        .cta-btn:hover {
+            background-color: #ffffff;
+            color: #0b0c10;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+        /* ÜMUMİ BÖLMƏ ÜSLUBLARI */
+        
+        section {
+            padding: 120px 20px 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 50px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #c5a880;
+            margin: 15px auto 0 auto;
+        }
+        /* 2. KURSLAR VƏ TƏLİMLƏR (SIRALANMIŞ REJİM) */
+        
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .card {
+            background: #12141c;
+            /* Premium tünd kart fonu */
+            border: 1px solid #1f222e;
+            padding: 40px;
+            border-radius: 4px;
+            width: 350px;
+            transition: all 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #c5a880;
+            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.15);
+        }
+        
+        .card h3 {
+            margin-bottom: 20px;
+            color: #c5a880;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        
+        .card p {
+            color: #a4a7ab;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        /* 3. ENDİRİMLƏR BÖLMƏSİ */
+        
+        .discount-box {
+            background: linear-gradient(135deg, #1f222e 0%, #0b0c10 100%);
+            border: 1px solid #c5a880;
+            color: white;
+            padding: 50px;
+            border-radius: 4px;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .discount-box h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .discount-box p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #a4a7ab;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #c5a880;
+            color: #0b0c10;
+            padding: 10px 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        /* 4. HAQQIMIZDA */
+        
+        #about p {
+            font-size: 1.15rem;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            color: #a4a7ab;
+            line-height: 2;
+        }
+        /* 5. ƏLAQƏ FORMASI */
+        
+        .contact-form {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #12141c;
+            border: 1px solid #1f222e;
+            padding: 50px;
+            border-radius: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #c5a880;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #0b0c10;
+            border: 1px solid #1f222e;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #fff;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #c5a880;
+            box-shadow: 0 0 10px rgba(197, 168, 128, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: #c5a880;
+            color: #0b0c10;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ffffff;
+            color: #0b0c10;
+        }
+        /* FOOTER */
+        
+        footer {
+            background-color: #050507;
+            color: #555;
+            text-align: center;
+            padding: 30px;
+            margin-top: 80px;
+            border-top: 1px solid #12141c;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- YUXARI MENYU PANELİ -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">GADIRZADEH ACADEMY</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Kurslar və təlimlər</a></li>
+                <li><a href="#discounts">Endirimlər</a></li>
+                <li><a href="#about">Haqqımızda</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. HOME (ƏSAS SƏHİFƏ) - VİDEOLU QARŞILANMA -->
+    <div id="home" class="video-container">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="https://mixkit.co" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="content">
+            <h1>Gələcəyinizi Bizimlə İnşa Edin</h1>
+            <p>Eksklüziv mühitdə peşəkar təlimçilərdən praktiki dərslər.</p>
+            <!-- Düymə bura bağlanıb: href="#courses" -->
+            <a href="#courses" class="cta-btn">Kursları Kəşf Et</a>
+        </div>
+    </div>
