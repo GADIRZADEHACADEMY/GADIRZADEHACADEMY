@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadirzadeh Academy</title>
+    <title>Luxe Academy</title>
     <style>
         * {
             margin: 0;
@@ -39,12 +39,22 @@
             align-items: center;
             width: 100%;
         }
-        .logo {
-            color: #c5a880;
-            font-size: 1.3rem;
-            font-weight: bold;
+        
+        /* PREMIUM BRAND LOGO KANTEYNERİ */
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Emblem və yazı arasındakı boşluq */
             text-decoration: none;
         }
+        .logo-text {
+            color: #c5a880; /* Şəkildəki qızılı ton */
+            font-size: 1.25rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
         .nav-links {
             display: flex;
             list-style: none;
@@ -103,7 +113,6 @@
             color: #c5a880;
         }
 
-        /* GİRİŞDƏKİ GÜCLÜ PARLAYAN PREMIUM DÜYMƏ */
         .cta-btn {
             display: inline-block;
             padding: 12px 30px;
@@ -119,7 +128,6 @@
         .cta-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            /* Güclü qızılı neon parlaması */
             box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880;
         }
 
@@ -233,7 +241,6 @@
             border-color: #c5a880;
         }
 
-        /* FORMANIN MÜRACİƏTİ GÖNDƏR DÜYMƏSİ */
         .submit-btn {
             display: block;
             width: 100%;
@@ -248,12 +255,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
-        /* DAHA AŞAĞI SƏVİYYƏLİ ZƏRİF PARLAMA EFEKTİ (SOFT GLOW) */
         .submit-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            /* Daha az yayılmış və daha zərif bir kölgə/parlama effekti */
             box-shadow: 0 0 10px rgba(197, 168, 128, 0.6);
         }
 
@@ -298,9 +302,19 @@
 
     <header>
         <nav class="navbar">
-            <a href="#home" class="logo">GADIRZADEH ACADEMY</a>
+            <!-- CANLI VƏ PREMIUM SVG LOQO BÖLMƏSİ -->
+            <a href="#home" class="brand-logo">
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                    <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="4" stroke-dasharray="6 6"/>
+                    <path d="M35 65V35H55M35 50H50" stroke="#c5a880" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M65 65V42C65 38.134 61.866 35 58 35C54.134 35 51 38.134 51 42V65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M48 53H65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Gadirzadeh Academy</span>
+            </a>
+            
             <ul class="nav-links">
-                <li><a href="#home">Əsas Səhifə</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#courses">Kurslar</a></li>
                 <li><a href="#discounts">Endirimlər</a></li>
                 <li><a href="#about">Haqqımızda</a></li>
@@ -323,17 +337,3 @@
 
     <section id="courses">
         <h2>Kurslar və Təlimlər</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>Full-Stack Proqramlaşdırma</h3>
-                <p>HTML, CSS, JavaScript, React, Node.js və Python öyrənərək sıfırdan dünya standartlarında veb saytlar hazırlayın.</p>
-            </div>
-            <div class="card">
-                <h3>İngilis dili təlimləri</h3>
-                <p>Sıfırdan ingilis dilini öyrənin və peşəkar səviyyəyə çatın.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="discounts">
-        <h2>Xüsusi Kampaniyalar</h2>
