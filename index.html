@@ -2,15 +2,14 @@
 <html lang="az">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Brauzer sekmesindeki basliq -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gadirzadeh Academy</title>
     
-    <!-- Brauzer sekmesindeki qlobusun yerine bizim xususi qizili logomuz (Favicon) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%23c5a880' stroke-width='4' fill='none'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23c5a880' font-size='32' font-weight='bold' font-family='Arial'%3EGA%3C/text%3E%3C/svg%3E">
+    <!-- BRAUZER SEKMESİNDƏKİ QIZILI LOQO (FAVICON) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%23c5a880' stroke-width='8' fill='none'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23c5a880' font-size='32' font-family='Arial' font-weight='bold'%3EGA%3C/text%3E%3C/svg%3E">
 
     <style>
-        /* CSS SIFIRLAMA VƏ ƏSAS PROPORTİYA AYARLARI */
+        /* SIFIRLAMA VƏ ƏSAS AYARLAR */
         * {
             margin: 0;
             padding: 0;
@@ -73,6 +72,8 @@
         .nav-links a:hover {
             color: #c5a880;
         }
+        
+        /* HOME VİDEO BÖLMƏSİ */
         .video-container {
             position: relative;
             width: 100%;
@@ -97,7 +98,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(11, 12, 16, 0.7);
+            background: rgba(11, 12, 16, 0.75);
             z-index: -1;
         }
         .content {
@@ -107,20 +108,22 @@
             width: 100%;
         }
         .content h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .content p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
             color: #c5a880;
         }
-
-        /* PREMIUM ESAS DÜYMƏ VƏ GÜCLÜ PARLAMA */
+        
+        /* PREMIUM NEON PARLAYAN DÜYMƏ */
         .cta-btn {
             display: inline-block;
-            padding: 12px 30px;
-            font-size: 0.9rem;
+            padding: 14px 35px;
+            font-size: 0.95rem;
             color: #0b0c10;
             background-color: #c5a880;
             text-decoration: none;
@@ -128,7 +131,6 @@
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
         .cta-btn:hover {
             background-color: #ffffff;
@@ -136,16 +138,17 @@
             box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880;
         }
 
+        /* ÜMUMİ SEKSİYA AYARLARI */
         section {
-            padding: 80px 15px 40px 15px;
+            padding: 100px 15px 50px 15px;
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
         }
         section h2 {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 35px;
+            font-size: 2rem;
+            margin-bottom: 45px;
             color: #ffffff;
             text-transform: uppercase;
         }
@@ -157,8 +160,8 @@
             background-color: #c5a880;
             margin: 10px auto 0 auto;
         }
-
-        /* AVTOMATİK REZİN KURS KARTLARI */
+        
+        /* KURSLAR ŞƏBƏKƏSİ */
         .grid-container {
             display: flex;
             flex-direction: column;
@@ -168,75 +171,83 @@
         .card {
             background: #12141c;
             border: 1px solid #1f222e;
-            padding: 25px;
+            padding: 30px;
             border-radius: 6px;
             width: 100%;
         }
-        .card:hover {
-            border-color: #c5a880;
-        }
         .card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #c5a880;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .card p {
             color: #a4a7ab;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
+        
+        /* ENDİRİMLƏR */
         .discount-box {
             background: #12141c;
             border: 1px solid #c5a880;
-            padding: 35px 15px;
+            padding: 40px 20px;
             border-radius: 6px;
             text-align: center;
             width: 100%;
         }
         .discount-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             color: #ffffff;
         }
         .discount-box p {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            margin-bottom: 25px;
             color: #a4a7ab;
         }
         .badge {
             display: inline-block;
             background-color: #c5a880;
             color: #0b0c10;
-            padding: 8px 15px;
+            padding: 8px 20px;
             font-weight: bold;
             font-size: 0.85rem;
             text-transform: uppercase;
             border-radius: 4px;
         }
+        
+        /* HAQQIMIZDA */
         #about p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-align: center;
             color: #a4a7ab;
+            max-width: 800px;
+            margin: 0 auto;
         }
+        
+        /* ƏLAQƏ FORMASI VƏ ZƏRİF PARLAYAN DÜYMƏSİ */
         .contact-form {
             background: #12141c;
             border: 1px solid #1f222e;
-            padding: 25px 15px;
+            padding: 30px 20px;
             border-radius: 6px;
             width: 100%;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: #c5a880;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             background-color: #0b0c10;
             border: 1px solid #1f222e;
             border-radius: 4px;
@@ -248,15 +259,13 @@
             border-color: #c5a880;
         }
         .form-group textarea {
-            height: 100px;
+            height: 120px;
             resize: vertical;
         }
-
-        /* ZƏRİF PARLAYAN GÖNDƏR DÜYMƏSİ */
         .submit-btn {
             display: block;
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             background-color: #c5a880;
             color: #0b0c10;
             border: none;
@@ -270,37 +279,38 @@
         .submit-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6);
+            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6); /* Zərif parlama */
         }
+        
         footer {
             background-color: #050507;
             color: #555;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 25px;
+            margin-top: 50px;
             border-top: 1px solid #12141c;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             width: 100%;
         }
 
-        /* KOMPÜTER EKRANLARI ÜÇÜN MÜKƏMMƏL STRUKTUR */
+        /* BÖYÜK EKRANLAR ÜÇÜN RESPONSIVE AYARLAR */
         @media (min-width: 768px) {
-            .content h1 { font-size: 3.5rem; }
-            .content p { font-size: 1.4rem; }
-            section h2 { font-size: 2.3rem; }
+            .content h1 { font-size: 3.8rem; }
+            .content p { font-size: 1.5rem; }
+            section h2 { font-size: 2.4rem; }
             .grid-container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr); /* PC-də yan-yana 3 dənə */
             }
             .contact-form { padding: 40px; max-width: 600px; margin: 0 auto; }
             .discount-box { max-width: 800px; margin: 0 auto; }
         }
 
-        /* MOBİL EKRANLARDA MENYUNUN QARIŞMAMASI ÜÇÜN */
+        /* MOBİL MOBİL MOBİL CİHAZLAR ÜÇÜN MENYU */
         @media (max-width: 480px) {
             .navbar {
                 flex-direction: column;
-                gap: 8px;
+                gap: 10px;
             }
             .nav-links {
                 gap: 12px;
@@ -313,24 +323,14 @@
 </head>
 <body>
 
-    <!-- NAVİQASİYA PANELİ VƏ LOGO -->
+    <!-- NAVİQASİYA PANELİ -->
     <header>
         <nav class="navbar">
             <a href="#home" class="brand-logo">
+                <!-- QIZILI DAİRƏVİ EMBLEM -->
                 <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
-                    <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="4" stroke-dasharray="6 6"/>
+                    <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="6" stroke-dasharray="4 4"/>
                     <path d="M35 65V35H55M35 50H50" stroke="#c5a880" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M65 65V42C65 38.134 61.866 35 58 35C54.134 35 51 38.134 51 42V65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
                     <path d="M48 53H65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-                </svg>
-                <span class="logo-text">Gadirzadeh Academy</span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Kurslar</a></li>
-                <li><a href="#about">Haqqımızda</a></li>
-                <li><a href="#contact">Əlaqə</a></li>
-            </ul>
-        </nav>
-    </header>
+                    
