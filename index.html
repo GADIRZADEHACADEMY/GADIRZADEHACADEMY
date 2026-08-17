@@ -2,21 +2,23 @@
 <html lang="az">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITLENİN DƏYİŞDİRİLMƏSİ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Title hissəsi rəsmi olaraq Gadirzadeh Academy edildi -->
     <title>Gadirzadeh Academy</title>
     
-    <!-- BRAUZER SEKMESİNDƏKİ QLOBUSUN PEŞƏKAR QIZILI LOQO İLƏ ƏVƏZ OLUNMASI (FAVICON) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22 fill=%22none%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 stroke=%22%23c5a880%22 stroke-width=%224%22 stroke-dasharray=%226 6%22/><path d=%22M35 65V35H55M35 50H50%22 stroke=%22%23c5a880%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><path d=%22M65 65V42C65 38.134 61.866 35 58 35C54.134 35 51 38.134 51 42V65%22 stroke=%22%23ffffff%22 stroke-width=%226%22 stroke-linecap=%22round%22/><path d=%22M48 53H65%22 stroke=%22%23ffffff%22 stroke-width=%226%22 stroke-linecap=%22round%22/></svg>">
+    <!-- Brauzer sekmesindeki qlobus ikonunun yerinə sənin şəxsi lüks qızılı loqon əlavə olundu -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://w3.org' viewBox='0 0 100 100' fill='none'><circle cx='50' cy='50' r='46' stroke='%23c5a880' stroke-width='8'/><path d='M35 65V35H55M35 50H50' stroke='%23c5a880' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/><path d='M65 65V42C65 38 61 35 58 35C54 35 51 38 51 42V65' stroke='%23ffffff' stroke-width='8' stroke-linecap='round'/><path d='M48 53H65' stroke='%23ffffff' stroke-width='8' stroke-linecap='round'/></svg>">
 
     <style>
+        /* ƏSAS SIFIRLAMA VƏ SİZİN SEÇDİYİNİZ TÜND FON */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         html {
-            scroll-behavior: smooth; /* Sürüşmə effektini aktiv edən kod */
+            scroll-behavior: smooth; /* Düyməyə basanda rəvan sürüşmə */
         }
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +28,8 @@
             overflow-x: hidden;
             width: 100%;
         }
+        
+        /* SABİT PEŞƏKAR NAVİQASİYA PANELİ */
         header {
             position: fixed;
             top: 0;
@@ -44,6 +48,8 @@
             align-items: center;
             width: 100%;
         }
+        
+        /* LOQO VƏ EMBLEM BÖLMƏSİ */
         .brand-logo {
             display: flex;
             align-items: center;
@@ -72,6 +78,8 @@
         .nav-links a:hover {
             color: #c5a880;
         }
+        
+        /* HOME - VİDEO BÖLMƏSİ */
         .video-container {
             position: relative;
             width: 100%;
@@ -115,7 +123,7 @@
             color: #c5a880;
         }
 
-        /* "KURSLARA BAX" DÜYMƏSİNİN PARLAMA EFFEKTİ */
+        /* 1. GÜCLÜ PARLAYAN "KURSLARA BAX" DÜYMƏSİ */
         .cta-btn {
             display: inline-block;
             padding: 12px 30px;
@@ -131,9 +139,10 @@
         .cta-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880;
+            box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880; /* Güclü parlaqlıq */
         }
 
+        /* ÜMUMİ SEKSİYA AYARLARI */
         section {
             padding: 80px 15px 40px 15px;
             max-width: 1200px;
@@ -155,6 +164,8 @@
             background-color: #c5a880;
             margin: 10px auto 0 auto;
         }
+        
+        /* KURSLAR ŞƏBƏKƏSİ */
         .grid-container {
             display: flex;
             flex-direction: column;
@@ -180,6 +191,8 @@
             color: #a4a7ab;
             font-size: 0.9rem;
         }
+        
+        /* ENDİRİMLƏR BÖLMƏSİ */
         .discount-box {
             background: #12141c;
             border: 1px solid #c5a880;
@@ -208,11 +221,15 @@
             text-transform: uppercase;
             border-radius: 4px;
         }
+        
+        /* HAQQIMIZDA */
         #about p {
             font-size: 1rem;
             text-align: center;
             color: #a4a7ab;
         }
+        
+        /* ƏLAQƏ FORMASI */
         .contact-form {
             background: #12141c;
             border: 1px solid #1f222e;
@@ -243,8 +260,12 @@
             outline: none;
             border-color: #c5a880;
         }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
 
-        /* FORMANIN ZƏRİF PARLAYAN DÜYMƏSİ */
+        /* 2. DAHA ZƏRİF/AŞAĞI SƏVİYYƏLİ PARLAYAN "GÖNDƏR" DÜYMƏSİ */
         .submit-btn {
             display: block;
             width: 100%;
@@ -262,9 +283,10 @@
         .submit-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6);
+            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6); /* İstədiyin kimi daha aşağı səviyyəli yumşaq parlama */
         }
 
+        /* SƏHİFƏ SONU */
         footer {
             background-color: #050507;
             color: #555;
@@ -276,18 +298,20 @@
             width: 100%;
         }
 
+        /* RESPONSIVE - KOMPÜTER EKRANLARI */
         @media (min-width: 768px) {
             .content h1 { font-size: 3.5rem; }
             .content p { font-size: 1.4rem; }
             section h2 { font-size: 2.3rem; }
             .grid-container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr); /* Kurslar kompüterdə səliqəli yan-yana düzülür */
             }
             .contact-form { padding: 40px; max-width: 600px; margin: 0 auto; }
             .discount-box { max-width: 800px; margin: 0 auto; }
         }
 
+        /* RESPONSIVE - MOBİL TELEFONLAR */
         @media (max-width: 480px) {
             .navbar {
                 flex-direction: column;
@@ -304,24 +328,13 @@
 </head>
 <body>
 
+    <!-- NAVİQASİYA PANELİ -->
     <header>
         <nav class="navbar">
             <a href="#home" class="brand-logo">
+                <!-- Şəxsi Lüks SVG Loqonuz -->
                 <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
-                    <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="4" stroke-dasharray="6 6"/>
-                    <path d="M35 65V35H55M35 50H50" stroke="#c5a880" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M65 65V42C65 38.134 61.866 35 58 35C54.134 35 51 38.134 51 42V65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-                    <path d="M48 53H65" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-                </svg>
-                <span class="logo-text">Gadirzadeh Academy</span>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Kurslar</a></li>
-                <li><a href="#discounts">Endirimlər</a></li>
-                <li><a href="#about">Haqqımızda</a></li>
-                <li><a href="#contact">Əlaqə</a></li>
-            </ul>
-        </nav>
-    </header>
+                    <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="8"/>
+                    <path d="M35 65V35H55M35 50H50" stroke="#c5a880" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M65 65V42C65 38 61 35 58 35C54 35 51 38 51 42V65" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M48 53H65" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
