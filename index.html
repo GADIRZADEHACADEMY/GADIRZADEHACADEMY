@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title hissəsi sənin istədiyin kimi dəyişdirildi -->
     <title>Gadirzadeh Academy</title>
     
-    <!-- GLOBUSUN YERİNƏ LOGOMUZU (FAVICON) QOYDUQ -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' stroke='%23c5a880' stroke-width='4' fill='%230b0c10'/%3E%3Cpath d='M35 65V35H55M35 50H50' stroke='%23c5a880' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M65 65V42C65 38.134 61.866 35 58 35C54.134 35 51 38.134 51 42V65' stroke='%23ffffff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M48 53H65' stroke='%23ffffff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+    <!-- Brauzer sekmesində qlobusun yerində görünəcək loqo ikonu (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://w3.org viewBox=%220 0 100 100%22 fill=%22none%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 stroke=%22%23c5a880%22 stroke-width=%228%22/><path d=%22M35 65V35H55M35 50H50%22 stroke=%22%23c5a880%22 stroke-width=%2210%22 stroke-linecap=%22round%22/><path d=%22M65 65V42C65 38 61 35 58 35C54 35 51 38 51 42V65%22 stroke=%22%23ffffff%22 stroke-width=%2210%22 stroke-linecap=%22round%22/><path d=%22M48 53H65%22 stroke=%22%23ffffff%22 stroke-width=%2210%22 stroke-linecap=%22round%22/></svg>">
 
     <style>
         * {
@@ -15,7 +16,7 @@
             box-sizing: border-box;
         }
         html {
-            scroll-behavior: smooth; /* Düyməyə basanda rəvan aşağı sürüşməni təmin edir */
+            scroll-behavior: smooth; /* Düyməyə basanda aşağı rəvan sürüşməni təmin edən kod */
         }
         body {
             font-family: Arial, sans-serif;
@@ -43,6 +44,8 @@
             align-items: center;
             width: 100%;
         }
+        
+        /* EMBLLEM VƏ YAZILI PREMIUM LOQO */
         .brand-logo {
             display: flex;
             align-items: center;
@@ -56,6 +59,7 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
+        
         .nav-links {
             display: flex;
             list-style: none;
@@ -114,7 +118,7 @@
             color: #c5a880;
         }
 
-        /* GİRİŞDƏKİ PARLAYAN "KURSLARA BAX" DÜYMƏSİ */
+        /* GİRİŞDƏKİ GÜCLÜ PARLAYAN "KURSLARA BAX" DÜYMƏSİ */
         .cta-btn {
             display: inline-block;
             padding: 12px 30px;
@@ -130,7 +134,7 @@
         .cta-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880; /* Qızılı güclü parlama */
+            box-shadow: 0 0 15px #c5a880, 0 0 30px #c5a880; /* Güclü qızılı neon parlaması */
         }
 
         section {
@@ -261,7 +265,7 @@
         .submit-btn:hover {
             background-color: #ffffff;
             color: #0b0c10;
-            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6); /* Zərif parlama */
+            box-shadow: 0 0 10px rgba(197, 168, 128, 0.6); /* Zərif parlama effekti */
         }
 
         footer {
@@ -275,6 +279,7 @@
             width: 100%;
         }
 
+        /* KOMPÜTER EKRANLARI ÜÇÜN NİZAMLANMA */
         @media (min-width: 768px) {
             .content h1 { font-size: 3.5rem; }
             .content p { font-size: 1.4rem; }
@@ -287,6 +292,7 @@
             .discount-box { max-width: 800px; margin: 0 auto; }
         }
 
+        /* MOBİL EKRANLAR ÜÇÜN NİZAMLANMA */
         @media (max-width: 480px) {
             .navbar {
                 flex-direction: column;
@@ -306,6 +312,7 @@
     <header>
         <nav class="navbar">
             <a href="#home" class="brand-logo">
+                <!-- Sənin şəkildə bəyəndiyin loqo emblemi -->
                 <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
                     <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="4" stroke-dasharray="6 6"/>
                     <path d="M35 65V35H55M35 50H50" stroke="#c5a880" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -314,13 +321,3 @@
                 </svg>
                 <span class="logo-text">Gadirzadeh Academy</span>
             </a>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Kurslar</a></li>
-                <li><a href="#discounts">Endirimlər</a></li>
-                <li><a href="#about">Haqqımızda</a></li>
-                <li><a href="#contact">Əlaqə</a></li>
-            </ul>
-        </nav>
-    </header>
